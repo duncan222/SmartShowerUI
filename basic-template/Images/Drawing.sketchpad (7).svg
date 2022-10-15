@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: SketchAPI 2022.8.25.2 https://api.sketch.io -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"  width="1873" height="961" viewBox="0 0 1873 961">
+<defs>
+	<linearGradient id="dna_3364079020" gradientUnits="userSpaceOnUse" x1="0" x2="562.8629979898102" y1="281.4314989949051" y2="281.4314989949051">
+		<stop offset="0.5000099999999998" style="stop-color:rgb(61, 129, 255);stop-opacity:1;"/>
+		<stop offset="0.49999999999999983" style="stop-color:rgb(247, 73, 48);stop-opacity:1;"/>
+	</linearGradient>
+</defs>
+<path style="fill: url(#dna_3364079020); mix-blend-mode: source-over; fill-opacity: 1; vector-effect: non-scaling-stroke;" sketchjs:tool="ring" d="M551.96 359 C517.35 479.69 406.99 562.86 281.43 562.86 155.88 562.86 45.51 479.69 10.9 359 L56.89 345.82 C85.62 445.99 177.22 515.02 281.43 515.02 385.64 515.02 477.25 445.99 505.97 345.82 z" transform="matrix(-1.793714828056654,0.0028567687754168392,-0.0021908526999570976,-1.3755978460061395,1415.6692224299754,910.1952758818634)"/>
+<path style="fill: #ffffff; mix-blend-mode: source-over; fill-opacity: 1; vector-effect: non-scaling-stroke;" sketchjs:tool="ring" d="M504.06 338.19 C469.47 444.64 370.28 516.71 258.35 516.71 146.43 516.71 47.23 444.64 12.64 338.19 L54.42 324.62 C83.12 412.97 165.46 472.79 258.35 472.79 351.25 472.79 433.58 412.97 462.29 324.62 z" transform="matrix(-1.87001039608341,0.0029782812884608825,-0.002284438779129267,-1.434358897777405,1393.2522017118763,934.3558816849963)"/>
+</svg>

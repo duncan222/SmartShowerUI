@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: SketchAPI 2022.8.25.2 https://api.sketch.io -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketchjs="https://sketch.io/dtd/" sketchjs:metadata="eyJuYW1lIjoiRHJhd2luZy5za2V0Y2hwYWQiLCJzdXJmYWNlIjp7ImlzUGFpbnQiOnRydWUsIm1ldGhvZCI6ImZpbGwiLCJibGVuZCI6Im5vcm1hbCIsImVuYWJsZWQiOnRydWUsIm9wYWNpdHkiOjEsInR5cGUiOiJwYXR0ZXJuIiwicGF0dGVybiI6eyJ0eXBlIjoicGF0dGVybiIsInJlZmxlY3QiOiJuby1yZWZsZWN0IiwicmVwZWF0IjoicmVwZWF0Iiwic21vb3RoaW5nIjpmYWxzZSwic3JjIjoidHJhbnNwYXJlbnRMaWdodCIsInN4IjoxLCJzeSI6MSwieDAiOjAuNSwieDEiOjEsInkwIjowLjUsInkxIjoxfSwiaXNGaWxsIjp0cnVlfSwiY2xpcFBhdGgiOnsiZW5hYmxlZCI6dHJ1ZSwic3R5bGUiOnsic3Ryb2tlU3R5bGUiOiJibGFjayIsImxpbmVXaWR0aCI6MX19LCJkZXNjcmlwdGlvbiI6Ik1hZGUgd2l0aCBTa2V0Y2hwYWQiLCJtZXRhZGF0YSI6e30sImV4cG9ydERQSSI6NzIsImV4cG9ydEZvcm1hdCI6InBuZyIsImV4cG9ydFF1YWxpdHkiOjAuOTUsInVuaXRzIjoicHgiLCJ3aWR0aCI6MTg3MywiaGVpZ2h0Ijo5NjEsInBhZ2VzIjpbeyJ3aWR0aCI6MTg3MywiaGVpZ2h0Ijo5NjF9XSwidXVpZCI6ImYxMzk0MTg3LTQyZTEtNDQ0OS05MzE0LTNhNzU1ZjlkNDYwMCJ9" width="1873" height="961" viewBox="0 0 1873 961">
+<defs>
+	<linearGradient id="dna_3364079020" gradientUnits="userSpaceOnUse" x1="0" x2="562.8629979898102" y1="281.4314989949051" y2="281.4314989949051">
+		<stop offset="0.5000099999999998" style="stop-color:rgb(61, 129, 255);stop-opacity:1;"/>
+		<stop offset="0.49999999999999983" style="stop-color:rgb(247, 73, 48);stop-opacity:1;"/>
+	</linearGradient>
+</defs>
+<path style="fill: url(#dna_3364079020); mix-blend-mode: source-over; fill-opacity: 1; vector-effect: non-scaling-stroke;" sketchjs:tool="ring" d="M562.86 281.43 C562.86 436.86 436.86 562.86 281.43 562.86 126 562.86 0 436.86 0 281.43 L61.91 281.43 C61.91 402.67 160.2 500.95 281.43 500.95 402.67 500.95 500.95 402.67 500.95 281.43 z" transform="matrix(-1.416914809087583,0.002256656365161208,-0.002256656365161208,-1.416914809087583,1290.571308195702,910.1631854884922)"/>
+<path style="fill: #ffffff; mix-blend-mode: source-over; fill-opacity: 1; vector-effect: non-scaling-stroke;" sketchjs:tool="ring" d="M516.71 258.35 C516.71 401.04 401.04 516.71 258.35 516.71 115.67 516.71 0 401.04 0 258.35 L56.84 258.35 C56.84 369.65 147.06 459.87 258.35 459.87 369.65 459.87 459.87 369.65 459.87 258.35 z" transform="matrix(-1.4643421678668702,0.006996622672854096,-0.006372181086377865,-1.3336510917288702,1271.0519381488798,869.5379855175953)"/>
+</svg>
