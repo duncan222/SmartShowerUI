@@ -1,3 +1,11 @@
+function off(){}
+
+function on() {    
+    var open = document.getElementById("ON");
+    var B = document.getElementById("onBut");
+    open.style.display = "block";
+    B.style.display = "none";  
+}
 
 let presave1 = [];
 let presave2 = [];
@@ -31,6 +39,7 @@ function saveClose(){
     
     document.getElementById("u2").innerHTML = 'User 2';
     var temp = document.getElementById("usr2");
+    var temp = document.getElementById("u2");
     temp.style.backgroundColor = "lightgrey";
     
     document.getElementById("u3").innerHTML = 'User 3';
@@ -79,12 +88,15 @@ function load1(){
 }
 
 function load2(){
-    let showerstate = presave2[0];
-    let showertemp = presave2[1];
+    // let showerstate = presave2[0];
+    // let showertemp = presave2[1];
     document.getElementById("showerStatus").innerHTML = showerstate;
     document.getElementById("displayValue").innerHTML = showertemp;
     document.getElementById("l2").innerHTML = 'Loaded';
+
     var temp = document.getElementById("load2");
+    var temp = document.getElementById("l2");
+
     temp.style.backgroundColor = "lightgreen";
 }
 
@@ -101,7 +113,7 @@ function load3(){
 }
 function load4(){
     let showerstate = presave4[0];
-    let showertemp = presave341];
+    let showertemp = presave4[1];
     document.getElementById("showerStatus").innerHTML = showerstate;
     document.getElementById("displayValue").innerHTML = showertemp;
     document.getElementById("l4").innerHTML = 'Loaded';
@@ -134,14 +146,16 @@ function usr1(){
 }
 
 function usr2(){
-    const showerstat = document.getElementById("showerStatus");
-    const showerTemp = document.getElementById("displayValue");
-    var status = showerstat.textContent.trim();
-    var temper = showerTemp.textContent.trim();
-    presave2 = [status, temper];
+    // const showerstat = document.getAttribute("showerStatus");
+    // const showerTemp = document.getAttribute("displayValue");
+    // var status = showerstat.textContent.trim();
+    // var temper = showerTemp.textContent.trim();
+    // presave2 = [showerstat, showerTemp];
     document.getElementById("u2").innerHTML = 'Updated';
     var temp = document.getElementById("usr2");
+    var temp1 = document.getElementById("u2");
     temp.style.backgroundColor = "lightgreen";
+    temp1.style.backgroundColor = "lightgreen";
     
 }
 
