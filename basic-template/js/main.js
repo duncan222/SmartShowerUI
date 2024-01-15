@@ -1,9 +1,4 @@
 
-
-function off(){}
-
-function on() {}
-
 let presave1 = [];
 let presave2 = [];
 var presave3 = [];
