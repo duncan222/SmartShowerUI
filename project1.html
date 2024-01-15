@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8">
+    <title>Project One: Smart Shower User Interface</title>
+    
+    <!-- The following line references an external css file -->
+    <!-- It defines style rules for your page, and elements in your page -->
+    <link href="basic-template/css/style.css" rel="stylesheet">
+	<link href="basic-template/js/main.js" rel="text/javascript">
+	<script src="basic-template/js/main.js"></script>
+
+
+</head>
+
+<body> 
+	
+	<!-- <div>
+		<div class = "temp">
+			<div></div>
+		</div>
+		<span class="reading">0</span>
+	</div>
+	<div class = "knob_container">
+		<div class="knob"></div>
+	</div> -->
+	
+
+	  <div class="circle">
+
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/jquery.roundslider/1.0/roundslider.min.js"></script>
+		<link href="https://cdn.jsdelivr.net/jquery.roundslider/1.0/roundslider.min.css" rel="stylesheet"/>
+	
+		
+		<div class = "arc" id="arc-slider" class="rslider rs-control rs-animation" style="align-content: center; height: 3000px; width: 3000px;align-self: center; left: 8%;"></div>
+		<div id = "display_Value"></div>
+		<script type="text/javascript">
+			$("#arc-slider").roundSlider({
+				sliderType: "min-range",
+				circleShape: "custom-quarter",
+				value: 90,
+				min: 50,
+				max:109,
+				startAngle: 45,
+				editableTooltip: true,
+				radius: 476,
+				width: 7,
+				handleSize: "+20",
+				tooltipFormat: function (args) {
+					
+					return (document.getElementById("display_Value").innerHTML = (args.value)+"°");
+					
+				}
+			});
+		</script>
+
+		<label id = "showerStatus" >On</label>
+		<!-- this is the code for the time of day -->
+		
+		<br><br><br><br><br><br><br><br>
+		<p><div id="currTime" style="text-align:center; font-size:32px; font-family:Verdana, Geneva, Tahoma, sans-serif"></p>
+			<script>
+				time = new Date();
+				if(time.getHours() == 0){
+
+					if(time.getMinutes() < 10){
+						document.getElementById("currTime").innerHTML =  "12:0" + time.getMinutes() + " AM";
+					}
+					else if(time.getMinutes() >= 10){
+						document.getElementById("currTime").innerHTML = "12:" + time.getMinutes() + " AM";
+					}
+				}
+				
+				else if(time.getHours() <= 12){
+					if(time.getMinutes() < 10){
+						document.getElementById("currTime").innerHTML = time.getHours() + ":0" + time.getMinutes() + " AM";
+					}
+					else if(time.getMinutes() >= 10){
+						document.getElementById("currTime").innerHTML = time.getHours() + ":" + time.getMinutes() + " AM";
+					}
+				}
+				else if(time.getHours() > 12){
+
+					if(time.getMinutes() < 10){
+						document.getElementById("currTime").innerHTML = (time.getHours() - 12) + ":0" + time.getMinutes() + " PM";
+					}
+					else if(time.getMinutes() >=10){
+						document.getElementById("currTime").innerHTML = (time.getHours() - 12) + ":" + time.getMinutes() + " PM";
+
+					}
+				}
+				
+			</script>
+		<br>
+
+
+
+
+		<!-- this is the code for the date -->
+		<p><div id="currentDate" style="text-align:center; font-size:19px; font-family: Verdana, Geneva, Tahoma, sans-serif"></p>
+			<script>
+				date = new Date();
+				weekDay = new Date().toLocaleDateString('en-Us', {weekday: 'long',});
+				month = date.getMonth() + 1;
+				day = date.getDate();
+				ret = null;
+				if(month == 1){	ret = "January";}
+				if(month == 2){ret = "Febuary";}
+				if(month == 3){ret = "March";}
+				if(month == 4){ret = "April"}
+				if(month == 5){ret = "May";}
+				if(month == 6){ret = "June";}
+				if(month == 7){	ret = "July";}
+				if(month == 8){ret = "August";}
+				if(month == 9){ret = "September";}
+				if(month == 10){ret = "October"}
+				if(month == 11){ret = "November";}
+				if(month == 12){ret = "December";}
+
+				if(day == 1 || day == 21 || day == 31){
+					document.getElementById("currentDate").innerHTML =  weekDay + ", " + ret + " " + day + "st";
+				}
+				else if(day == 2 || day == 22 || day == 32){
+					document.getElementById("currentDate").innerHTML =  weekDay + ", " + ret + " " + day + "nd";
+				}
+				else if(day == 3 || day == 23 || day == 33){
+					document.getElementById("currentDate").innerHTML =  weekDay + ", " + ret + " " + day + "rd";
+				}
+				else {
+					document.getElementById("currentDate").innerHTML =  weekDay + ", " + ret + " " + day + "th";
+				}
+			</script>
+
+<svg class = "dial" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketchjs="https://sketch.io/dtd/" sketchjs:metadata="eyJuYW1lIjoiRHJhd2luZy5za2V0Y2hwYWQiLCJzdXJmYWNlIjp7ImlzUGFpbnQiOnRydWUsIm1ldGhvZCI6ImZpbGwiLCJibGVuZCI6Im5vcm1hbCIsImVuYWJsZWQiOnRydWUsIm9wYWNpdHkiOjEsInR5cGUiOiJwYXR0ZXJuIiwicGF0dGVybiI6eyJ0eXBlIjoicGF0dGVybiIsInJlZmxlY3QiOiJuby1yZWZsZWN0IiwicmVwZWF0IjoicmVwZWF0Iiwic21vb3RoaW5nIjpmYWxzZSwic3JjIjoidHJhbnNwYXJlbnRMaWdodCIsInN4IjoxLCJzeSI6MSwieDAiOjAuNSwieDEiOjEsInkwIjowLjUsInkxIjoxfSwiaXNGaWxsIjp0cnVlfSwiY2xpcFBhdGgiOnsiZW5hYmxlZCI6dHJ1ZSwic3R5bGUiOnsic3Ryb2tlU3R5bGUiOiJibGFjayIsImxpbmVXaWR0aCI6MX19LCJkZXNjcmlwdGlvbiI6Ik1hZGUgd2l0aCBTa2V0Y2hwYWQiLCJtZXRhZGF0YSI6e30sImV4cG9ydERQSSI6NzIsImV4cG9ydEZvcm1hdCI6InBuZyIsImV4cG9ydFF1YWxpdHkiOjAuOTUsInVuaXRzIjoicHgiLCJ3aWR0aCI6MTg3MywiaGVpZ2h0Ijo5NjEsInBhZ2VzIjpbeyJ3aWR0aCI6MTg3MywiaGVpZ2h0Ijo5NjF9XSwidXVpZCI6ImYxMzk0MTg3LTQyZTEtNDQ0OS05MzE0LTNhNzU1ZjlkNDYwMCJ9" width="1250" height="961" viewBox="0 0 1873 961">
+	<defs>
+		<linearGradient id="dna_3364079020" gradientUnits="userSpaceOnUse" x1="0" x2="562.8629979898102" y1="281.4314989949051" y2="281.4314989949051">
+			<stop offset="0.5000099999999998" style="stop-color:rgb(61, 129, 255);stop-opacity:1;"/>
+			<stop offset="0.49999999999999983" style="stop-color:rgb(247, 73, 48);stop-opacity:1;"/>
+		</linearGradient>
+	</defs>
+	<path style="fill: url(#dna_3364079020); mix-blend-mode: source-over; fill-opacity: 1; vector-effect: non-scaling-stroke;" sketchjs:tool="ring" d="M551.96 359 C517.35 479.69 406.99 562.86 281.43 562.86 155.88 562.86 45.51 479.69 10.9 359 L73.12 341.16 C99.77 434.09 184.75 498.13 281.43 498.13 378.11 498.13 463.09 434.09 489.74 341.16 z" transform="matrix(-1.8713250388990232,0.0029803750608307852,-0.0021768975607466766,-1.3668356597400586,1414.405038463456,900.0394129771945)"/>
+	<path style="fill: #ffffff; mix-blend-mode: source-over; fill-opacity: 1; vector-effect: non-scaling-stroke;" sketchjs:tool="ring" d="M506.7 329.56 C474.93 440.36 373.61 516.71 258.35 516.71 143.09 516.71 41.78 440.36 10.01 329.56 L72.09 311.76 C95.92 394.86 171.91 452.12 258.35 452.12 344.8 452.12 420.78 394.86 444.61 311.76 z" transform="matrix(-2.035556858778141,0.003241939679476915,-0.001823779491807593,-1.1451190399837583,1414.6007071730887,809.0426281819274)"/>
+	</svg>
+
+
+		<!-- The settings button -->
+
+		<div class="round-1"></div>
+		<button onClick="settingClick()" class="hidBut1" type="button"><input type="image" class = "image1" src="basic-template/Images/buttonSetting.png" alt = "Submit" width = "286" height= "157.32"></div>
+		<button onClick="settingClose()" type="button" ID="backButton2"><input type="image" src="basic-template/Images/gohome.png" alt = "Submit" width = "220" height= "80" ></button>
+		
+
+
+		<div ID = "settingAPPS">
+			<button onClick = "preClick()" id = "preassure" type ="button"><p style = "font-family: setoshi; font-size: 30px;">Water Preassure</p></button>
+			<button id = "water" type ="button"><p style = "font-family: setoshi; font-size: 30px;">Water Usage</p></button>
+			<button id = "system" type ="button"><p style = "font-family: setoshi; font-size: 30px;">System Settings</p></button>
+			<button onClick = "loadClick()" id = "load" type ="button"><p style = "font-family: setoshi; font-size: 30px;">Load Setting</p></button>
+			<button onClick = "saveClick()" id = "save" type ="button"><p style = "font-family: setoshi; font-size: 30px;">Save Settings</p></button>
+		</div>
+
+
+		<div ID = "saveUsers">
+			<button onClick = "usr1()" id = "usr1" type ="button"><p id = "u1" style = "font-family: setoshi; font-size: 30px;">User 1</p></button>
+			<button onClick = "usr2()" id = "usr2" type ="button"><p id = "u2" style = "font-family: setoshi; font-size: 30px;">User 2</p></button>
+			<button onClick = "usr3()" id = "usr3" type ="button"><p id = "u3" style = "font-family: setoshi; font-size: 30px;">User 3</p></button>
+			<button onClick = "usr4()" id = "usr4" type ="button"><p id = "u4" style = "font-family: setoshi; font-size: 30px;">User 4</p></button>
+			<button onClick = "usr5()" id = "usr5" type ="button"><p id = "u5" style = "font-family: setoshi; font-size: 30px;">User 5</p></button>
+			<button  onClick="saveClose()" id = "backButton4" type="button"><input type="image" src="basic-template/Images/gohome.png" alt = "Submit" width = "220" height= "80" ></button>
+
+		</div>
+
+		<div ID = "loadUsers">
+			<button onClick = "load1()" id = "load1" type ="button"><p id = "l1" style = "font-family: setoshi; font-size: 30px;">User 1</p></button>
+			<button onClick = "load2()" id = "load2" type ="button"><p id = "l2" style = "font-family: setoshi; font-size: 30px;">User 2</p></button>
+			<button onClick = "load3()" id = "load3" type ="button"><p id = "l3" style = "font-family: setoshi; font-size: 30px;">User 3</p></button>
+			<button onClick = "load4()" id = "load4" type ="button"><p id = "l4" style = "font-family: setoshi; font-size: 30px;">User 4</p></button>
+			<button onClick = "load5()" id = "load5" type ="button"><p id = "l5" style = "font-family: setoshi; font-size: 30px;">User 5</p></button>
+			<button  onClick="loadClose()" id = "backButton5" type="button"><input type="image" src="basic-template/Images/gohome.png" alt = "Submit" width = "220" height= "80" ></button>
+
+		</div>
+
+		<div ID = "showerP">
+			<button onClick = "mistP()" id = "mist" type ="button"><p style = "font-family: setoshi; font-size: 30px;">Mist</p></button>
+			<button onClick = "showerP()" id = "shower" type ="button"><p style = "font-family:setoshi; font-size: 30px;">Shower</p></button>
+			<button onClick = "jetP()" id = "jet" type ="button"><p style = "font-family:setoshi; font-size: 30px;">Jet</p></button>
+			<button onClick = "rainP()" id = "rain" type ="button"><p style = "font-family:setoshi; font-size: 30px;">Rain</p></button>
+			<button onClick = "fullbodyP()" id = "fullbody" type ="button"><p style = "font-family:setoshi; font-size: 30px;">Full Body</p></button>
+			<button  onClick="preClose()" id = "backButton3" type="button"><input type="image" src="basic-template/Images/gohome.png" alt = "Submit" width = "220" height= "80" ></button>
+
+		</div>
+
+		<div class = "round-2"></div>
+		<button  onClick="appClick()" class="hidBut2" type="button"  ><input type="image" class = "image1" src="basic-template/Images/buttonApp.png" alt = "Submit" width = "276" height= "157.32"></div>
+		<img id="appBack" style= "display:none;"   src=	"basic-template/Images/apps background.png"/>
+		<button  onClick="appClose()" id = "backButton" type="button"><input type="image" src="basic-template/Images/gohome.png" alt = "Submit" width = "220" height= "80" ></button>
+		<button id = "weather" type ="button"><input type="image" src="basic-template/Images/weatherAPP1.png" alt = "Submit" width = "130" height = "90"></button>
+		<button id = "spotify" type ="button"><input type="image" src="basic-template/Images/spotifyAPP.png" alt = "Submit" width = "90" height = "90"></button>
+		<button id = "youtube" type ="button"><input type="image" src="basic-template/Images/youtubeAPP.png" alt = "Submit" width = "90" height = "90"></button>
+	
+
+		<svg class = "blocker" version="1.1" xmlns="http://www.w3.org/2000/svg"  width="1873" height="961" viewBox="0 0 1873 961">
+			<path style="fill: #000000; mix-blend-mode: source-over; fill-opacity: 1; vector-effect: non-scaling-stroke;" sketchjs:tool="triangle" d="M0.71 0 L1.32 1.06 0.09 1.06 z" transform="matrix(0.70866977429126,-0.7055403255703919,0.7055403255703919,0.70866977429126,1610.9971343344193,724.9975668421092)"/>
+			<path style="fill: #ffffff; mix-blend-mode: source-over; fill-opacity: 1; vector-effect: non-scaling-stroke;" sketchjs:tool="ring" d="M891.57 553.15 C844.6 756.59 664.29 901.31 455.51 903.13 246.73 904.95 63.92 763.4 13.41 560.82 L35.32 555.36 C83.31 747.81 256.97 882.28 455.32 880.55 653.66 878.82 824.95 741.34 869.57 548.08 z" transform="matrix(0.8840897374146875,0.008841192082514165,-0.00890071893928065,0.8900422246671574,310.68880048320256,9.204732719839853)"/>
+		</svg>
+		<br><br><br><br><br><br><br><br>
+
+
+		
+
+	
+	</div>
+	
+
+    <!-- Load external JS files -->
+    
+
+</body>
